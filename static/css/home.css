@@ -1,0 +1,45 @@
+/* === Home === */
+.hero{background:linear-gradient(135deg,var(--accent) 0%,var(--accent) 60%,var(--gold) 160%);color:#f6f1e3;border-radius:20px;padding:34px 28px;margin-bottom:26px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;width:280px;height:280px;border:1px solid rgba(243,233,210,.2);border-radius:50%;top:-110px;left:-80px;pointer-events:none}
+.hero h2{margin:0 0 8px;font-size:1.5rem;font-weight:800;position:relative;z-index:1}
+.hero p{margin:0;color:rgba(255,255,255,.85);position:relative;z-index:1}
+.section-h{display:flex;align-items:center;gap:10px;margin:26px 0 14px;font-weight:800;font-size:1.05rem}
+.section-h svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.lesson-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.lesson-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 4px 14px rgba(80,60,30,.06);transition:.25s;display:flex;flex-direction:column;gap:12px;position:relative;color:inherit}
+.lesson-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(80,60,30,.14);border-color:var(--accent);text-decoration:none}
+.lesson-card .cover{width:48px;height:48px;border-radius:12px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center}
+.lesson-card .cover svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.lesson-card h3{margin:0;font-size:1.05rem;font-weight:800}
+.lesson-card p{margin:0;font-size:.85rem;color:var(--ink-muted)}
+.lesson-card .badge{position:absolute;top:14px;left:14px;font-size:.7rem;font-weight:700;background:var(--gold-soft);color:var(--gold);padding:3px 10px;border-radius:999px;border:1px solid var(--gold)}
+.lesson-card .meta{font-size:.78rem;color:var(--ink-muted);display:flex;justify-content:space-between}
+.continue-card{border:2px dashed var(--gold);background:var(--gold-soft)}
+.continue-card:hover{border-color:var(--gold)}
+
+/* === Danger button + reset modal === */
+.btn-danger{background:#c0392b;color:#fff;border-color:#c0392b}
+.btn-danger:hover{color:#fff;filter:brightness(1.1);border-color:#c0392b}
+.btn-danger svg{stroke:currentColor}
+
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;
+  align-items:center;justify-content:center;z-index:200;padding:16px;
+}
+.modal-overlay.show{display:flex}
+.modal{
+  background:var(--surface);border-radius:18px;max-width:440px;width:100%;
+  padding:24px;box-shadow:0 24px 60px rgba(0,0,0,.4);border:1px solid var(--line);
+}
+.modal h3{margin:0 0 10px;display:flex;align-items:center;gap:10px;font-size:1.05rem}
+.modal h3 svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.modal p{color:var(--ink-muted);font-size:.9rem;margin:0 0 18px;line-height:1.8}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-start}
+
+.reset-tools{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+
+.lesson-card-wrap{position:relative;display:flex;flex-direction:column}
+.lesson-card-wrap .lesson-reset-btn{
+  margin-top:8px;justify-content:center;font-size:.82rem;padding:6px 10px;
+  display:inline-flex;align-items:center;gap:6px;
+}
